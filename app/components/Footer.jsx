@@ -4,7 +4,7 @@ import logo from "../../public/logo.svg";
 
 const Footer = () => {
   return (
-    <div className="px-4 sm:px-6 lg:px-8">
+    <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
       <div>
         <div className="2xl:flex xl:flex lg:flex justify-between items-center">
           <div className="mb-6 md:mb-0">
@@ -33,7 +33,6 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Phone & Fax Section */}
             <div className="flex flex-col md:flex-row gap-4 md:gap-[168px]">
               <div className="flex flex-col md:flex-row gap-4 md:gap-[22px]">
                 <div className="flex gap-4 md:gap-[22px]">
@@ -78,9 +77,8 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Social Media Section */}
         <div className="mt-12 md:mt-[58px]">
-          <div className="flex flex-col md:flex-row gap-6 md:gap-[36px] items-center">
+          <div className="flex flex-col md:flex-row gap-6 md:gap-[36px] items-center justify-end">
             <div className="hidden md:block text-[14px] opacity-50 w-[95px]">
               Social Media
             </div>
@@ -141,7 +139,7 @@ const Footer = () => {
                   />
                 </svg>
               </div>
-              {/* <div>
+              <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="35"
@@ -154,8 +152,8 @@ const Footer = () => {
                     fill="white"
                   />
                 </svg>
-              </div> */}
-              {/* <div>
+              </div> 
+               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="34"
@@ -196,13 +194,12 @@ const Footer = () => {
                     fill="white"
                   />
                 </svg>
-              </div> */}
+              </div> 
             </div>
           </div>
         </div>
       </div>
 
-      {/* Divider */}
       <div className="mt-16 md:mt-[112px] opacity-20">
         <hr />
       </div>

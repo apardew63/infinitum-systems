@@ -1,0 +1,22 @@
+.hover-fill {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.hover-fill::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  background: rgba(0, 255, 255, 0.5);
+  z-index: 5;
+  transition: width 0.4s ease;
+}
+
+.hover-fill:hover::before {
+  width: 100%;
+}

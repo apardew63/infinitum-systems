@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Poppins, Abhaya_Libre } from "next/font/google";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
-import LogoCarousel from "./components/LogoCarousel";
 import AnimatedAboutUsSection from "./components/AboutUs";
 import ServicesSection from "./components/ServicesSection";
 import BenifitsSection from "./components/BenifitsSection";
@@ -12,17 +11,10 @@ import PricingSection from "./components/PricingSection";
 import Testimonials from "./components/Testimonials";
 import NewsLetterSection from "./components/NewsLetterSection";
 import Footer from "./components/Footer";
-import GlowingCard from "./components/Dummy";
-import { ThreeDMarquee } from "./components/ui/3d-marquee";
-import bImg from "../public/benifits-img.png";
-import SmoothScrollProvider from "./smooth-scroll-provider";
-import { BuildWebsitesSection } from "./components/BuildWebsitesSection";
-// import palmVideo from "../public/the-palm-video.mp4";
 import kaiserImg from "../public/kaiser-img.png";
 import HBOimg from "../public/hbo-img.png";
 import zenSilkImg from "../public/silk-zen-img.png";
-import { UltimateDevelopmentSection } from "./components/UltimateDevelopmentSection";
-import { DD } from "./components/DD";
+import LogoSlider from "./components/LogoSlider";
 
 export default function Home() {
   const images = [
@@ -66,18 +58,17 @@ export default function Home() {
 
   return (
     <>
-      <SmoothScrollProvider>
-        <div
-          className="bg-[#00051C] min-h-screen"
-          style={{
-            backgroundColor: "rgb(0, 5, 28)",
-            backgroundImage: `
+      <div
+        className="bg-[#00051C] min-h-screen"
+        style={{
+          backgroundColor: "rgb(0, 5, 28)",
+          backgroundImage: `
           radial-gradient(circle at 50% -35%, rgb(1, 178, 193) 0px, transparent 30%)`,
 
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-          }}
-        >
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
           <div>
             <Navbar />
           </div>
@@ -85,27 +76,23 @@ export default function Home() {
             <HeroSection />
           </div>
 
-          <div className="py-20">
-            <BuildWebsitesSection />
-          </div>
-
-          <div className="">
-            <UltimateDevelopmentSection />
+          <div className="lg:pt-0 pt-10">
+            <LogoSlider />
           </div>
 
           <div className="mt-[90px] lg:mt-[141px]">
             <AnimatedAboutUsSection />
           </div>
 
-          <div className="mt-[60px] lg:mt-[100px] lg:px-[108px] 1280:px-[40px]">
+          <div className="mt-[60px] lg:mt-[100px] lg:px-[108px] xl:px-[120px] 2xl:px-[140px] 3xl:px-[160px] 1280:px-[40px]">
             <ServicesSection />
           </div>
 
-          <div className="2xl:px-[84px] 1280:px-[40px] lg:mt-[350px] mt-[200px]">
+          <div className="2xl:px-[84px] xl:px-[100px] 2xl:px-[120px] 3xl:px-[140px] 1280:px-[40px] lg:mt-[350px] mt-[200px]">
             <BenifitsSection />
           </div>
 
-          <div className="2xl:px-[84px] lg:py-44 py-28 1280:px-[40px]">
+          <div className="2xl:px-[84px] xl:px-[100px] 2xl:px-[120px] 3xl:px-[140px] lg:py-44 py-28 1280:px-[40px]">
             <AmazingSection />
           </div>
 
@@ -113,19 +100,18 @@ export default function Home() {
             <PricingSection />
           </div>
 
-          <div className="2xl:px-[84px] py-10">
+          <div className="2xl:px-[84px] xl:px-[100px] 2xl:px-[120px] 3xl:px-[140px] py-10">
             <Testimonials />
           </div>
 
-          <div className="2xl:px-[84px] py-10">
+          <div className="2xl:px-[84px] xl:px-[100px] 2xl:px-[120px] 3xl:px-[140px] py-10">
             <NewsLetterSection />
           </div>
 
-          <div className="2xl:px-[84px] lg:py-44  1280:px-[40px]">
+          <div className="2xl:px-[84px] xl:px-[100px] 2xl:px-[120px] 3xl:px-[140px] lg:py-44  1280:px-[40px]">
             <Footer />
-          </div> 
+          </div>
         </div>
-      </SmoothScrollProvider>
     </>
   );
 }

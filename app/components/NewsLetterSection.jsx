@@ -2,7 +2,7 @@ import React from "react";
 
 const NewsLetterSection = () => {
   return (
-    <div className="px-4 py-10 md:py-14 lg:py-16">
+    <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-10 md:py-14 lg:py-16">
       <div className="bg-[#000726] flex flex-col items-center gap-6 rounded-md px-4 py-8 md:flex-row md:justify-between md:px-8 lg:px-12 lg:py-12">
         {/* Title */}
         <div className="text-lg text-white font-semibold md:text-xl lg:text-2xl xl:text-3xl">

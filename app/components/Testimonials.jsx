@@ -38,7 +38,7 @@ export default function Testimonials() {
 
   return (
     <div
-      className="bg-[#00051C] w-full text-white px-4 py-12 md:py-20 lg:py-24"
+      className="bg-[#00051C] w-full text-white px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-12 md:py-20 lg:py-24"
       style={{
         backgroundImage: `url('/gradient.png')`,
         backgroundRepeat: "no-repeat",
@@ -47,7 +47,6 @@ export default function Testimonials() {
       }}
     >
       <section className="flex flex-col items-center text-center">
-        {/* heading */}
         <h3 className="text-sm text-gray-400 md:text-base lg:text-lg">
           Testimonials
         </h3>
@@ -55,7 +54,6 @@ export default function Testimonials() {
           What <span className="!text-cyan-400">Our Client</span> Says
         </h2>
 
-        {/* card */}
         <div className="relative bg-[#032d3e] w-full max-w-lg md:max-w-2xl lg:max-w-3xl rounded-xl px-6 py-10 mt-8 md:py-14 md:px-10 lg:py-16 lg:px-12">
           <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 border-4 border-cyan-400 rounded-full overflow-hidden bg-gray-200">
             <img
@@ -76,7 +74,6 @@ export default function Testimonials() {
           </p>
         </div>
 
-        {/* navigation */}
         <div className="mt-16 flex items-center justify-center gap-3 flex-wrap md:mt-20 lg:gap-6">
           <button
             onClick={prev}
@@ -111,11 +108,10 @@ export default function Testimonials() {
           </button>
         </div>
       </section>
+<div className="mt-8 sm:mt-12 md:mt-16 flex justify-center px-4">
+  <hr className="w-full sm:w-[90%] md:w-[80%] lg:w-[70%] border-t-2 border-[#01B2C1]" />
+</div>
 
-      {/* bottom divider */}
-      <div className="mt-12 md:mt-16 flex justify-center">
-        <hr className="w-full max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-5xl border-t-2 border-[#01B2C1]" />
-      </div>
     </div>
   );
 }

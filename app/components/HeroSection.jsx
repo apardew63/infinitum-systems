@@ -1,16 +1,13 @@
 "use client";
 import Image from "next/image";
-import React, { useState, useEffect, useRef } from "react";
-import gsap from "gsap";
-import { TextPlugin } from "gsap/TextPlugin";
-
-gsap.registerPlugin(TextPlugin);
+import React, { useState, useEffect } from "react";
+import AnimatedText from "./ui/animated-text";
 
 const Counter = ({ target, label, suffix }) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    const duration = 2000;
+    const duration = 5000;
     const startTime = Date.now();
 
     const updateCounter = () => {
@@ -44,39 +41,17 @@ const Counter = ({ target, label, suffix }) => {
 };
 
 const HeroSection = () => {
-  const wordRef = useRef(null); // ✅ Define ref here
-
-  useEffect(() => {
-    const words = ["Solution", "Innovation", "Strategy", "Technology"];
-    const tl = gsap.timeline({ repeat: -1, repeatDelay: 0.5 });
-
-    // Force initial clear to avoid render delay
-    gsap.set(wordRef.current, { text: "" });
-
-    words.forEach((word) => {
-      tl.to(wordRef.current, {
-        duration: 1,
-        text: word,
-        ease: "none",
-      })
-        .to({}, { duration: 1 }) // pause after typing
-        .to(wordRef.current, {
-          duration: 0.5,
-          text: "",
-          ease: "power2.in",
-        });
-    });
-  }, []);
 
   return (
     <>
-      <div className="py-16 sm:py-32 md:py-48 lg:py-64 px-4 sm:px-8 md:px-16 lg:px-[108px] relative flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-0">
+      <div className="py-16 sm:py-32 md:py-48 lg:py-64 px-4 sm:px-8 md:px-16 lg:px-[108px] xl:px-[120px] 2xl:px-[140px] 3xl:px-[160px] relative flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-0">
         <div className="w-full lg:w-auto">
           <h1 className="text-[28px] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white uppercase leading-tight">
             Creative{" "}
-            <span className="!text-[#46F0FF]" ref={wordRef}>
-              Solution
-            </span>
+            <AnimatedText
+              words={["Solution", "Innovation", "Strategy", "Technology"]}
+              textClassName="!text-[#46F0FF]"
+            />
             <br />
             For a Digital <br /> World
           </h1>
@@ -88,7 +63,7 @@ const HeroSection = () => {
           </button>
         </div>
 
-        <div className="lg:hidden relative w-full lg:w-[223px] lg:pl-72 flex flex-col sm:flex-row lg:flex-col items-start gap-4 lg:gap-0">
+        <div className="lg:hidden relative w-full lg:w-[223px] lg:pl-72 flex flex-col sm:flex-row lg:flex-col items-start gap-4 lg:gap-0 max-w-xs mx-auto">
           <div className="flex gap-2 lg:gap-0 lg:block relative">
             <div className="w-[59px] h-[59px] bg-[url('https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-06-04/BuRidrCEDW.png')] bg-cover bg-no-repeat lg:absolute lg:top-0 lg:left-0 z-[13]" />
             <div className="w-[59px] h-[59px] bg-[url('https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-06-04/XPqOcLZgnJ.png')] bg-cover bg-no-repeat lg:absolute lg:top-0 lg:left-[53px] z-[22]" />
@@ -142,11 +117,12 @@ const HeroSection = () => {
 
             <div className="mt-2 lg:mt-6 text-start bg-[#00051C]/10 backdrop-blur-md rounded-2xl px-4 py-3 lg:px-6 lg:py-4 border border-white/10 shadow-lg -translate-y-1 w-[200px] sm:w-[220px] lg:w-[260px] text-white">
               <div className="text-3xl sm:text-4xl lg:text-5xl font-bold">
-                90%
+                             <Counter target={90} label="FASTER TECHNOLOGY" suffix="%" />
+
               </div>
-              <div className="text-sm sm:text-base font-normal mt-1">
+              {/* <div className="text-sm sm:text-base font-normal mt-1">
                 FASTER TECHNOLOGY
-              </div>
+              </div> */}
             </div>
           </div>
 

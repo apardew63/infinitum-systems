@@ -119,7 +119,6 @@
 "use client";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import { Button } from "./ui/moving-border";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { createPortal } from "react-dom";
@@ -161,7 +160,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`py-6 sm:py-8 lg:py-10 px-4 lg:pr-0 pr-6 sm:px-8 lg:px-[108px] fixed w-full z-50 top-0 start-0 transition-all duration-300 ${
+      className={`py-3 sm:py-5 lg:py-6 px-4 lg:pr-0 pr-6 sm:px-8 lg:px-[108px] xl:px-[120px] 2xl:px-[140px] 3xl:px-[160px] fixed w-full z-50 top-0 start-0 transition-all duration-300 ${
         scrolled
           ? "bg-[#00051C]/60 backdrop-blur-xl shadow-md"
           : "bg-transparent"
@@ -174,7 +173,7 @@ const Navbar = () => {
               src="/logo.svg"
               className="h-10 sm:h-12 md:h-16 lg:h-20 w-auto ml-1"
               alt="Logo"
-              width={180}
+              width={150}
               height={16}
             />
           </Link>
@@ -182,14 +181,12 @@ const Navbar = () => {
 
         <div className="flex md:order-2">
           {mounted && isDesktop && (
-            <Button
-              className="font-semibold text-base sm:text-lg cursor-pointer"
-              containerClassName="inline-block"
-              borderRadius="9999px"
-              duration={3000}
+            <button
+              type="button"
+              className="inline-block cursor-pointer bg-[#01B2C1] text-white px-6 py-2 mt-4 rounded-full font-bold hover:bg-white hover:text-[#01B2C1] transition duration-300 text-sm sm:text-base lg:text-lg 3xl:px-8 3xl:py-3 3xl:text-lg 3xl:mt-6"
             >
-              Get started
-            </Button>
+              Get Started
+            </button>
           )}
           <button
             onClick={toggleMenu}
@@ -253,10 +250,11 @@ const Navbar = () => {
           >
             About Us
           </Link>
+
           <Link
-            href="/#what-we-do"
+            href="/whatwedo"
             className={`transition-colors duration-300 ${
-              isActive("/#what-we-do")
+              isActive("/whatwedo")
                 ? "text-[#46F0FF]"
                 : "text-white hover:!text-[#46F0FF]"
             }`}
@@ -278,7 +276,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Drawer using Portal */}
       {mounted &&
         createPortal(
           <div
@@ -309,7 +306,6 @@ const Navbar = () => {
                 </button>
               </div>
 
-              {/* MENU LINKS */}
               <ul className="flex flex-col items-center space-y-6 w-full max-w-xs">
                 <li>
                   <Link
@@ -339,10 +335,10 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    href="/#what-we-do"
+                    href="/whatwedo"
                     onClick={handleItemClick}
                     className={`block py-3 text-center text-lg sm:text-xl font-extralight transition-all duration-300 ${
-                      isActive("/#what-we-do")
+                      isActive("/whatwedo")
                         ? "text-[#01B2C1]"
                         : "text-white hover:text-[#01B2C1]"
                     }`}
@@ -368,9 +364,9 @@ const Navbar = () => {
               <div className="mt-10">
                 <button
                   type="button"
-                  className="bg-[#01B2C1] text-white px-6 py-3 sm:px-8 sm:py-4 sm:text-lg rounded-full font-semibold hover:bg-white hover:text-[#01B2C1] transition duration-300"
+                  className="inline-block cursor-pointer bg-[#01B2C1] text-white px-6 py-2 mt-4 rounded-full font-bold hover:bg-white hover:text-[#01B2C1] transition duration-300 text-sm sm:text-base lg:text-lg 3xl:px-8 3xl:py-3 3xl:text-lg 3xl:mt-6"
                 >
-                  Get started
+                  Get Started
                 </button>
               </div>
             </div>

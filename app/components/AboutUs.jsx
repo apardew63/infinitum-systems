@@ -2,10 +2,14 @@
 import React from "react";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
-import about from "../../public/about.png";
+import { motion } from "framer-motion";
+import about from "../../public/images/about.png";
 
 const AnimatedAboutUsSection = () => {
-  const { ref } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
 
   return (
     <div
@@ -18,50 +22,53 @@ const AnimatedAboutUsSection = () => {
       "
     >
       {/* Image Section */}
-      <div
+      <motion.div
+        initial={{ opacity: 0, x: -80 }}
+        animate={inView ? { opacity: 1, x: 0 } : {}}
+        transition={{ duration: 0.8, ease: "easeOut" }}
         className="
-    relative w-full lg:w-1/2 flex justify-center items-center 
-    group overflow-hidden rounded-2xl mb-10 lg:mb-0
-  "
+          relative w-full lg:w-1/2 flex justify-center items-center 
+          group overflow-hidden rounded-2xl mb-10 lg:mb-0
+          p-[20px]
+        "
       >
-        <div
-          className="
-      absolute inset-0 bg-gradient-to-tr from-[#27C840]/10 to-transparent
-      opacity-0 group-hover:opacity-100 transition-opacity duration-500
-    "
-        ></div>
-
         <Image
           src={about}
           alt="Infinitum Systems"
           width={580}
           height={570}
           className="
-      relative z-10 object-contain w-[80%] sm:w-[75%] md:w-[65%] lg:w-auto
-      transition-transform duration-700 ease-out
-      group-hover:scale-110 group-hover:rotate-2
-    "
+            relative z-10 object-contain w-[80%] sm:w-[75%] md:w-[65%] lg:w-auto
+            transition-transform duration-700 ease-out
+            group-hover:scale-110 group-hover:rotate-2
+          "
         />
-      </div>
+      </motion.div>
 
       {/* Floating Circle */}
-      <div
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={inView ? { opacity: 1, scale: 1 } : {}}
+        transition={{ duration: 0.7, delay: 0.3 }}
         className="
           absolute right-6 sm:right-10 lg:right-[100px] top-6 lg:top-0 
           hidden sm:block
         "
       >
         <Image
-          src="/circle.svg"
+          src="/images/circle.svg"
           alt="About Us"
           width={120}
           height={120}
           className="transition-all duration-300 hover:brightness-125"
         />
-      </div>
+      </motion.div>
 
       {/* Text Section */}
-      <div
+      <motion.div
+        initial={{ opacity: 0, x: 80 }}
+        animate={inView ? { opacity: 1, x: 0 } : {}}
+        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         className="
           w-full lg:w-1/2 text-white 
           text-center lg:text-left 
@@ -102,7 +109,7 @@ const AnimatedAboutUsSection = () => {
         >
           Explore
         </button>
-      </div>
+      </motion.div>
     </div>
   );
 };

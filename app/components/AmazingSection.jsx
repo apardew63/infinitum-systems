@@ -3,9 +3,9 @@ import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import gsap from "gsap";
-import circleIcon from "../../public/circle.svg";
-import explore1 from "../../public/1.png";
-import explore2 from "../../public/2.png";
+import circleIcon from "../../public/images/circle.svg";
+import explore1 from "../../public/images/1.png";
+import explore2 from "../../public/images/2.png";
 
 const AmazingSection = () => {
   const cardRefs = useRef([]);

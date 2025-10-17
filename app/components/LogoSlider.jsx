@@ -1,7 +1,7 @@
 import React from "react";
 import "./LogoSlider.css";
 
-const logos = ["/logo1.png", "/logo2.png", "/logo1.png", "/logo2.png", "/logo1.png", "/logo2.png", "/logo1.png"];
+const logos = ["/images/logo1.png", "/images/logo2.png", "/images/logo1.png", "/images/logo2.png", "/images/logo1.png", "/images/logo2.png", "/images/logo1.png"];
 
 const LogoSlider = () => {
   return (

@@ -5,9 +5,9 @@ import { ArrowUpRight } from "lucide-react";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { SparklesCore } from "./ui/sparkles";
-import image from "../../public/image2.png";
-import image2 from "../../public/image3.png";
-import image3 from "../../public/image4.png";
+import image from "../../public/images/image2.png";
+import image2 from "../../public/images/image3.png";
+import image3 from "../../public/images/image4.png";
 
 const services = [
   {
@@ -19,7 +19,7 @@ const services = [
     title: "Web Dev",
     desc: "We build blazing-fast websites with clean code and scalable architecture.",
     img: image2,
-  },
+  },  
   {
     title: "Branding",
     desc: "Crafting memorable brand experiences through visual identity and storytelling.",

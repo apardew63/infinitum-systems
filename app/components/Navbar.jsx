@@ -170,7 +170,7 @@ const Navbar = () => {
         <div className="flex items-center">
           <Link href="/">
             <Image
-              src="/logo.svg"
+              src="/images/logo.svg"
               className="h-10 sm:h-12 md:h-16 lg:h-20 w-auto ml-1"
               alt="Logo"
               width={150}

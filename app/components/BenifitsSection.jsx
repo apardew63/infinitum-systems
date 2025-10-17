@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import benifitsImg from "../../public/benifits-img.png";
-import icons from "../../public/icons.png";
+import benifitsImg from "../../public/images/benifits-img.png";
+import icons from "../../public/images/icons.png";
 
 const BenifitsSection = () => {
   return (

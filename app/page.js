@@ -11,9 +11,9 @@ import PricingSection from "./components/PricingSection";
 import Testimonials from "./components/Testimonials";
 import NewsLetterSection from "./components/NewsLetterSection";
 import Footer from "./components/Footer";
-import kaiserImg from "../public/kaiser-img.png";
-import HBOimg from "../public/hbo-img.png";
-import zenSilkImg from "../public/silk-zen-img.png";
+import kaiserImg from "../public/images/kaiser-img.png";
+import HBOimg from "../public/images/hbo-img.png";
+import zenSilkImg from "../public/images/silk-zen-img.png";
 import LogoSlider from "./components/LogoSlider";
 
 export default function Home() {

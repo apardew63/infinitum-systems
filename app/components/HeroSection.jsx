@@ -92,13 +92,13 @@ const HeroSection = () => {
           loop
           playsInline
         >
-          <source src="/hero-video.mp4" type="video/mp4" />
+          <source src="/images/hero-video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
         <div className="absolute bottom-[60px] sm:bottom-[120px] md:bottom-[160px] lg:bottom-[200px] xl:bottom-[220px] 2xl:bottom-60 3xl:bottom-[260px] left-1/2 transform -translate-x-1/2 translate-y-1/4 z-20">
           <Image
-            src="/hero-lady.png"
+            src="/images/hero-lady.png"
             alt="Hero Lady"
             width={802}
             height={802}
@@ -107,7 +107,7 @@ const HeroSection = () => {
 
         <div className="w-[300px] lg:hidden absolute top-[-272px] right-[-150px]">
 
-          <img src="/hero-lady.png" className="w-full" />
+          <img src="/images/hero-lady.png" className="w-full" />
         </div>
 
           <div className="absolute left-full top-[60px] sm:top-[100px] md:top-[140px] lg:top-[200px] flex flex-col gap-4 lg:gap-6 text-start hidden sm:flex">

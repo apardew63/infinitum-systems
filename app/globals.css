@@ -17,6 +17,10 @@ body {
   will-change: transform;
 }
 
+.heading {
+  font-family: "Abhaya Libre", serif;
+}
+
 @theme {
   --breakpoint-xs: 30rem;       /* 480px */
   --breakpoint-1080: 67.5rem;   /* 1080px */

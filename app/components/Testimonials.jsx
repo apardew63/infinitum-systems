@@ -4,25 +4,25 @@ import { useState } from "react";
 
 const testimonials = [
   {
-    text: `"Lorem ipsum dolor sit amet..."`,
+    text: `""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate"`,
     name: "Jessica Anna",
     title: "Product Manager at BrightApp",
     img: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg",
   },
   {
-    text: `"Excellent service and fantastic UI."`,
+    text: `""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate"`,
     name: "Liam Gray",
     title: "CTO at TechCore",
     img: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg",
   },
   {
-    text: `"Professional and consistent support."`,
+    text: `""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate"`,
     name: "Sophia Turner",
     title: "CEO at Creatix",
     img: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg",
   },
   {
-    text: `"Amazing experience from start to finish."`,
+    text: `""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate"`,
     name: "Ethan Smith",
     title: "Founder at InnovateX",
     img: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg",
@@ -47,10 +47,10 @@ export default function Testimonials() {
       }}
     >
       <section className="flex flex-col items-center text-center">
-        <h3 className="text-sm text-gray-400 md:text-base lg:text-lg">
+        <h3 className="text-sm text-gray-400 md:text-base lg:text-lg font-['Poppins']">
           Testimonials
         </h3>
-        <h2 className="text-2xl font-bold mt-2 md:text-4xl lg:text-5xl">
+        <h2 className="text-2xl font-bold mt-2 md:text-4xl lg:text-5xl font-abhaya">
           What <span className="!text-cyan-400">Our Client</span> Says
         </h2>
 
@@ -63,18 +63,18 @@ export default function Testimonials() {
             />
           </div>
 
-          <p className="text-sm text-gray-300 leading-relaxed mb-6 md:text-base lg:text-lg">
+          <p className="text-sm text-gray-300 leading-relaxed mb-6 md:text-base lg:text-lg font-['Poppins']">
             {testimonials[current].text}
           </p>
-          <h4 className="text-cyan-400 font-bold text-base md:text-lg lg:text-xl">
+          <h4 className="text-cyan-400 font-bold text-base md:text-lg lg:text-xl font-['Poppins']">
             {testimonials[current].name}
           </h4>
-          <p className="text-xs text-gray-400 md:text-sm lg:text-base">
+          <p className="text-xs text-gray-400 md:text-sm lg:text-base font-['Poppins']">
             {testimonials[current].title}
           </p>
         </div>
 
-        <div className="mt-16 flex items-center justify-center gap-3 flex-wrap md:mt-20 lg:gap-6">
+        <div className="mt-16 flex items-center justify-center gap-3 flex-wrap md:mt-20 lg:gap-6 font-['Poppins']">
           <button
             onClick={prev}
             className="w-9 h-9 text-lg border-2 border-cyan-400 text-cyan-400 rounded-full flex items-center justify-center hover:bg-cyan-400 hover:text-black transition md:w-10 md:h-10 md:text-xl lg:w-12 lg:h-12 lg:text-2xl"
@@ -108,10 +108,9 @@ export default function Testimonials() {
           </button>
         </div>
       </section>
-<div className="mt-8 sm:mt-12 md:mt-16 flex justify-center px-4">
-  <hr className="w-full sm:w-[90%] md:w-[80%] lg:w-[70%] border-t-2 border-[#01B2C1]" />
-</div>
-
+      <div className="mt-8 sm:mt-12 md:mt-16 flex justify-center px-4">
+        <hr className="w-full sm:w-[90%] md:w-[80%] lg:w-[100%] border-t-2 border-[#01B2C1]" />
+      </div>
     </div>
   );
 }

@@ -23,9 +23,7 @@ const AnimatedAboutUsSection = () => {
     >
       {/* Image Section */}
       <motion.div
-        initial={{ opacity: 0, x: -80 }}
-        animate={inView ? { opacity: 1, x: 0 } : {}}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        
         className="
           relative w-full lg:w-1/2 flex justify-center items-center 
           group overflow-hidden rounded-2xl mb-10 lg:mb-0
@@ -38,9 +36,9 @@ const AnimatedAboutUsSection = () => {
           width={580}
           height={570}
           className="
-            relative z-10 object-contain w-[80%] sm:w-[75%] md:w-[65%] lg:w-auto
-            transition-transform duration-700 ease-out
-            group-hover:scale-110 group-hover:rotate-2
+            relative z-10 object-contain w-[100%] sm:w-[5%] md:w-[5%] lg:w-[85%]
+            
+            
           "
         />
       </motion.div>
@@ -76,14 +74,14 @@ const AnimatedAboutUsSection = () => {
         "
       >
         <h3 className="text-xl sm:text-2xl">
-          <span className="font-semibold">About </span>
-          <span className="!text-[#01B2C1] font-semibold">Us</span>
+          <span className="font-semibold font-['Poppins']">About </span>
+          <span className="!text-[#01B2C1] font-semibold font-['Poppins']">Us</span>
         </h3>
 
         <h2
           className="
             text-2xl sm:text-3xl lg:text-5xl font-semibold 
-            leading-snug lg:leading-tight mt-4 font-['Poppins'] 
+            leading-snug lg:leading-tight mt-4 font-abhaya
             w-full sm:w-[90%] lg:w-[661px]
           "
         >
@@ -93,7 +91,7 @@ const AnimatedAboutUsSection = () => {
 
         <p
           className="
-            text-sm sm:text-base leading-relaxed mt-6 font-semibold 
+            text-sm sm:text-base leading-relaxed mt-6 font-normal font-['Poppins'] 
             w-full sm:w-[90%] lg:w-[584px]
           "
         >

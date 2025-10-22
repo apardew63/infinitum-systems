@@ -46,7 +46,7 @@ const HeroSection = () => {
     <>
       <div className="py-16 sm:py-32 md:py-48 lg:py-64 px-4 sm:px-8 md:px-16 lg:px-[108px] xl:px-[120px] 2xl:px-[140px] 3xl:px-[160px] relative flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-0">
         <div className="w-full lg:w-auto">
-          <h1 className="text-[28px] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white uppercase leading-tight">
+          <h1 className="text-[28px] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold font-abhaya text-white uppercase leading-tight">
             Creative{" "}
             <AnimatedText
               words={["Solution", "Innovation", "Strategy", "Technology"]}

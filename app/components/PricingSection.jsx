@@ -46,7 +46,7 @@ const PricingSection = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-[#00051C]/85 to-[#000A33]/85 z-0"></div>
+      <div className="absolute  z-0"></div>
       <div className="relative z-10 w-full max-w-7xl 3xl:max-w-[1600px] mx-auto">
         <div className="text-center mb-16 3xl:mb-20">
           <h1 className="text-3xl md:text-4xl lg:text-5xl 3xl:text-6xl font-bold text-white mb-4">
@@ -70,7 +70,7 @@ const PricingSection = () => {
                 active:bg-white active:text-black
               "
             >
-              <div className="flex flex-col justify-center items-center text-center gap-4 md:gap-5 3xl:gap-[25px]">
+              <div className="flex flex-col justify-center items-center text-center gap-4 md:gap-5 3xl:gap-[25px] font-['Poppins']">
                 <div className="text-2xl md:text-[32px] 3xl:text-[40px] font-semibold">
                   {item.title}
                 </div>

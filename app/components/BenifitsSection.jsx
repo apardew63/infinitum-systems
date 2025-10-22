@@ -22,20 +22,20 @@ const BenifitsSection = () => {
             alt="image"
             className="w-full h-auto rounded-lg"
           />
-          <div className="absolute w-[128px] lg:text-left text-center lg:w-full bottom-[266px] left-[178px] lg:bottom-4 lg:left-4 bg-[#01B2C1] text-white px-3 py-1 rounded-full text-xs shadow-md">
+          <div className="absolute w-[128px] lg:text-left text-center lg:w-full bottom-[266px] max-sm:bottom-[280px] max-sm:left-[187px] left-[1708px] lg:bottom-4 lg:left-4 bg-[#01B2C1] text-white px-3 py-1 rounded-full text-xs shadow-md">
             Innovative Thinking
           </div>
         </div>
 
         {/* Left Text Content */}
         <div className="text-center xl:text-left">
-          <div className="text-sm sm:text-base xl:text-[16px] 2xl:text-[20px] font-semibold">
+          <div className="text-sm sm:text-base xl:text-[16px] 2xl:text-[20px] font-semibold font-['Poppins']">
             <span className="text-[#FFF]">Our</span>
             <span className="!text-[#46F0FF]"> Benifits</span>
           </div>
 
           <div
-            className="
+            className="font-abhaya
               text-2xl sm:text-3xl md:text-4xl lg:text-5xl
               xl:text-[42px] xl:font-extrabold
               xl:w-[520px] 2xl:text-[68px]
@@ -56,24 +56,24 @@ const BenifitsSection = () => {
 
           {/* Mobile Cards for Benefits */}
           <div className="flex flex-row">
-            <div className="mt-6 mr-6 max-sm:mt-[80px]">
+            <div className="mt-6 mr-6 max-sm:mt-[60px]">
               <Image src={icons} height={60} width={60} />
             </div>
-            <div className="mt-6 space-y-4 xl:mt-[36px] xl:space-y-0 xl:flex gap-[30px] flex flex-col">
+            <div className="mt-6 space-y-4 xl:mt-[36px] xl:space-y-0 xl:flex gap-[30px] max-sm:gap-[0px] flex flex-col">
               <div className="bg-[#0A0F2C] rounded-lg p-4 xl:p-0 xl:bg-transparent">
-                <div className="!text-[#42E1F1] text-sm sm:text-base xl:text-[16px] 2xl:text-[20px]">
+                <div className="!text-[#42E1F1] text-sm sm:text-base xl:text-[16px] 2xl:text-[20px] font-['Poppins']">
                   Reliable Execution
                 </div>
-                <div className="text-sm sm:text-base 2xl:text-[18px] mt-2 xl:mt-[10px]">
+                <div className="text-sm sm:text-base 2xl:text-[18px] mt-2 xl:mt-[10px] font-['Poppins']">
                   Fresh ideas grounded in consistent delivery.
                 </div>
               </div>
 
               <div className="bg-[#0A0F2C] rounded-lg p-4 xl:p-0 xl:bg-transparent">
-                <div className="text-sm sm:text-base xl:text-[16px] 2xl:text-[20px]">
+                <div className="text-sm sm:text-base xl:text-[16px] 2xl:text-[20px] font-['Poppins']">
                   Strategic by Choice
                 </div>
-                <div className="text-sm sm:text-base 2xl:text-[18px] mt-2 xl:mt-[10px]">
+                <div className="text-sm sm:text-base 2xl:text-[18px] mt-2 xl:mt-[10px] font-['Poppins']">
                   A team fueled by curiosity and guided by smart decisions.
                 </div>
               </div>
@@ -86,7 +86,7 @@ const BenifitsSection = () => {
               inline-block cursor-pointer bg-[#01B2C1] text-white px-6 py-2 mt-4 rounded-full font-bold hover:bg-white hover:text-[#01B2C1] transition duration-300 text-sm sm:text-base lg:text-lg 3xl:px-8 3xl:py-3 3xl:text-lg 3xl:mt-6
             "
           >
-            <div className="text-xs sm:text-sm 3xl:text-base font-semibold">
+            <div className="text-xs sm:text-sm 3xl:text-base font-semibold font-['Poppins']">
               Read More
             </div>
           </div>
@@ -102,7 +102,7 @@ const BenifitsSection = () => {
             className="w-full h-auto"
           />
           <button
-            className="
+            className="font-['Poppins']
               bg-[#01B2C1] cursor-pointer 
               text-xs sm:text-sm xl:text-[16px] 2xl:text-xl 
               px-3 sm:px-4 h-8 sm:h-10 

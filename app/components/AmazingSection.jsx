@@ -6,6 +6,7 @@ import gsap from "gsap";
 import circleIcon from "../../public/images/circle.svg";
 import explore1 from "../../public/images/1.png";
 import explore2 from "../../public/images/2.png";
+import explore3 from "../../public/images/3.png";
 
 const AmazingSection = () => {
   const cardRefs = useRef([]);
@@ -92,17 +93,17 @@ const AmazingSection = () => {
   };
 
   return (
-    <div className="relative px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
+    <div className="relative px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 max-sm:text-center max-sm:justify-center">
       {/* Title & Description */}
       <div className="flex flex-col min-[1080px]:flex-row justify-between min-[1280px]:gap-[120px] 3xl:gap-[160px]">
-        <div className="text-[32px] sm:text-[38px] leading-tight min-[1080px]:text-[44px] min-[1080px]:w-[520px] min-[1280px]:text-[50px] 2xl:text-[68px] 3xl:text-[88px] font-extrabold">
+        <div className="font-abhaya text-[32px] sm:text-[38px] leading-tight min-[1080px]:text-[44px] min-[1080px]:w-[520px] min-[1280px]:text-[50px] 2xl:text-[68px] 3xl:text-[88px] font-extrabold">
           Explore Our{" "}
           <span className="!text-[#46F0FF]">
             <br className="hidden min-[1280px]:block 2xl:hidden" /> Amazing
-          </span>{" "}
+          </span>
           Works
         </div>
-        <div className="mt-4 sm:mt-6 min-[1080px]:mt-0">
+        <div className="mt-4 sm:mt-6 min-[1080px]:mt-0 font-['Poppins']">
           <div className="text-[14px] sm:text-[16px] font-semibold min-[1080px]:text-[16px] 2xl:text-[20px] 3xl:text-[24px]">
             <span className="text-[#FFF]">Our</span>
             <span className="text-[#46F0FF]"> Work</span>
@@ -115,12 +116,12 @@ const AmazingSection = () => {
       </div>
 
       {/* Circle Icon */}
-      <div className="hidden min-[1080px]:block absolute min-[1080px]:top-[-40px] min-[1080px]:left-[360px] min-[1280px]:left-[400px] 2xl:top-[-50px] left-[450px] 2xl:left-[450px] 3xl:left-[540px]">
-        <Image src={circleIcon} alt="About Us" width={157} height={157} />
+      <div className="hidden min-[1080px]:block absolute min-[1080px]:top-[-40px] min-[1080px]:left-[360px] min-[1280px]:left-[400px] 2xl:top-[-50px] left-[450px] 2xl:left-[450px] 3xl:left-[700px]">
+        <Image src={circleIcon} alt="About Us" width={200} height={200} />
       </div>
 
       {/* Categories */}
-      <div className="flex flex-wrap gap-3 mt-6 sm:gap-4 min-[1080px]:gap-[24px] 2xl:gap-[31px]">
+      <div className="flex flex-wrap gap-3 mt-6 sm:gap-4 min-[1080px]:gap-[24px] 2xl:gap-[31px] font-['Poppins'] max-sm:flex max-sm:justify-center">
         <div className="px-4 py-2 text-sm sm:text-base rounded-full bg-[#01B2C1] text-white">
           Branding
         </div>
@@ -133,7 +134,7 @@ const AmazingSection = () => {
       </div>
 
       <div className="py-12 sm:py-16 md:py-20 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 xl:gap-10 relative">
-        {[explore1, explore2, explore1].map((image, index) => (
+        {[explore1, explore2, explore3].map((image, index) => (
           <div
             key={index}
             className="relative group overflow-hidden rounded-lg shadow-lg cursor-crosshair"
@@ -151,7 +152,7 @@ const AmazingSection = () => {
 
             <div
               ref={(el) => (arrowRefs.current[index] = el)}
-              className="absolute bottom-4 right-4 bg-[#01B2C1] text-white group-hover:bg-white group-hover:text-[#01B2C1] rounded-full p-3 sm:p-4 w-14 sm:w-16 h-14 sm:h-16 flex items-center justify-center transition-all duration-300 ease-in-out opacity-90"
+              className="absolute bottom-4 right-4 bg-[#01B2C1] text-white group-hover:bg-white group-hover:text-[#01B2C1] rounded-full p-3 sm:p-4 w-14 sm:w-16 h-14 sm:h-16 flex items-center justify-center transition-all duration-300 ease-in-out opacity-90 max-sm:right-2"
             >
               <ArrowUpRight size={24} />
             </div>

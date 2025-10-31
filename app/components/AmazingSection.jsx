@@ -2,7 +2,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
-import gsap from "gsap";
 import circleIcon from "../../public/images/circle.svg";
 import explore1 from "../../public/images/1.png";
 import explore2 from "../../public/images/2.png";
@@ -30,22 +29,12 @@ const AmazingSection = () => {
     cards.forEach((card, i) => {
       const arrow = arrowRefs.current[i];
       const enter = () => {
-        gsap.killTweensOf(arrow);
-        gsap.to(arrow, {
-          opacity: 1,
-          scale: 1.1,
-          duration: 0.4,
-          ease: "back.out(1.7)",
-        });
+        arrow.style.opacity = "1";
+        arrow.style.transform = "scale(1.1)";
       };
       const leave = () => {
-        gsap.killTweensOf(arrow);
-        gsap.to(arrow, {
-          opacity: 1,
-          scale: 1,
-          duration: 0.3,
-          ease: "power1.out",
-        });
+        arrow.style.opacity = "1";
+        arrow.style.transform = "scale(1)";
       };
       card.addEventListener("mouseenter", enter);
       card.addEventListener("mouseleave", leave);

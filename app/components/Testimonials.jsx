@@ -60,6 +60,7 @@ export default function Testimonials() {
               src={testimonials[current].img}
               alt={testimonials[current].name}
               className="w-full h-full object-cover"
+              loading="lazy"
             />
           </div>
 
@@ -96,6 +97,7 @@ export default function Testimonials() {
                 src={t.img}
                 alt={t.name}
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
           ))}

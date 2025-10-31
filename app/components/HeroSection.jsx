@@ -107,7 +107,7 @@ const HeroSection = () => {
 
         <div className="w-[300px] lg:hidden absolute top-[-272px] right-[-150px]">
 
-          <img src="/images/hero-lady.png" className="w-full" />
+          <img src="/images/hero-lady.png" className="w-full" loading="lazy" />
         </div>
 
           <div className="absolute left-full top-[60px] sm:top-[100px] md:top-[140px] lg:top-[200px] flex flex-col gap-4 lg:gap-6 text-start hidden sm:flex">

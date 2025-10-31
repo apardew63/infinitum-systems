@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useEffect, useRef } from "react";
-import gsap from "gsap";
 import { SparklesCore } from "./ui/sparkles";
 import image from "../../public/images/image2.png";
 import image2 from "../../public/images/image3.png";
@@ -42,48 +41,28 @@ const ServiceCards = () => {
       const imageContainer = imageContainerRefs.current[i];
 
       const enter = () => {
-        gsap.killTweensOf([button, imageContainer]);
-
         // Shrink image container height
-        gsap.to(imageContainer, {
-          height: 350,
-          duration: 0.4,
-          ease: "power2.inOut",
-        });
+        imageContainer.style.height = "350px";
 
         // Show "Explore More" button
         if (button) {
           button.style.display = "flex";
-          gsap.to(button, {
-            opacity: 1,
-            y: -2,
-            duration: 0.5,
-            ease: "power3.out",
-          });
+          button.style.opacity = "1";
+          button.style.transform = "translateY(-2px)";
         }
       };
 
       const leave = () => {
-        gsap.killTweensOf([button, imageContainer]);
-
         // Reset image height
-        gsap.to(imageContainer, {
-          height: 440,
-          duration: 0.4,
-          ease: "power2.inOut",
-        });
+        imageContainer.style.height = "440px";
 
         // Hide button
         if (button) {
-          gsap.to(button, {
-            opacity: 0,
-            y: 0,
-            duration: 0.4,
-            ease: "power1.in",
-            onComplete: () => {
-              button.style.display = "none";
-            },
-          });
+          button.style.opacity = "0";
+          button.style.transform = "translateY(0)";
+          setTimeout(() => {
+            button.style.display = "none";
+          }, 400);
         }
       };
 
@@ -123,7 +102,7 @@ const ServiceCards = () => {
               <div className="bg-[#0A0F2C] rounded-2xl overflow-hidden shadow-xl relative z-10">
                 <div
                   ref={(el) => (imageContainerRefs.current[index] = el)}
-                  className="relative overflow-hidden h-[440px] transition-height duration-300 ease-in-out"
+                  className="relative overflow-hidden h-[440px] max-sm:h-[300px] transition-height duration-300 ease-in-out"
                 >
                   <Image
                     src={service.img}
@@ -145,7 +124,7 @@ const ServiceCards = () => {
                   {/* Explore More button for all cards */}
                   <div
                     ref={(el) => (buttonRefs.current[index] = el)}
-                    className="absolute bottom-[-20px] max-sm:bottom-[-10px] right-[-2px] opacity-0 z-30 bg-[#00051C] w-28 sm:w-36 h-20 max-sm:h-15 sm:h-20 rounded-md flex items-center justify-center"
+                    className="absolute bottom-[-20px] max-sm:bottom-[-10px] right-[-2px] opacity-0 z-30 bg-[#00051C] w-28 sm:w-36 h-20 max-sm:h-15 sm:h-20 rounded-tl-4xl flex items-center justify-center"
                     style={{ display: "none" }}
                   >
                     <button className="bg-cyan-400 text-white px-4 py-2 rounded-full hover:bg-cyan-500 transition max-sm:px-1 max-sm:p-1">

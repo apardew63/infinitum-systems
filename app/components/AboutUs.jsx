@@ -14,7 +14,7 @@ const AnimatedAboutUsSection = () => {
   return (
     <div
       ref={ref}
-      className="
+      className="relative bg-[url('/images/aboutBg.png')] bg-cover bg-center bg-no-repeat h-[100vh]
         flex flex-col lg:flex-row items-center justify-center 
         bg-[#00051C] relative overflow-hidden
         py-10 sm:py-14 lg:py-20 
@@ -33,10 +33,8 @@ const AnimatedAboutUsSection = () => {
         <Image
           src={about}
           alt="Infinitum Systems"
-          width={580}
-          height={570}
           className="
-            relative z-10 object-contain w-[100%] sm:w-[5%] md:w-[5%] lg:w-[85%]
+            relative z-10 object-contain w-[100%] max-sm:w-[100%] sm:w-[10%] md:w-[10%] lg:w-[80%]
             
             
           "

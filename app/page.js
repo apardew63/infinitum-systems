@@ -11,50 +11,50 @@ import PricingSection from "./components/PricingSection";
 import Testimonials from "./components/Testimonials";
 import NewsLetterSection from "./components/NewsLetterSection";
 import Footer from "./components/Footer";
-import kaiserImg from "../public/images/kaiser-img.png";
+// import kaiserImg from "../public/images/kaiser-img.png";
 import HBOimg from "../public/images/hbo-img.png";
 import zenSilkImg from "../public/images/silk-zen-img.png";
 import LogoSlider from "./components/LogoSlider";
 
 export default function Home() {
-  const images = [
-    kaiserImg.src,
-    { type: "video", src: "/atelier-video.mp4" },
-    zenSilkImg.src,
-    { type: "video", src: "/kaiser-video.mp4" },
-    HBOimg.src,
-    { type: "video", src: "/plinth-video.mp4" },
-    kaiserImg.src,
-    { type: "video", src: "/the-palm-video.mp4" },
-    kaiserImg.src,
-    { type: "video", src: "/atelier-video.mp4" },
-    zenSilkImg.src,
-    { type: "video", src: "/kaiser-video.mp4" },
-    HBOimg.src,
-    { type: "video", src: "/plinth-video.mp4" },
-    kaiserImg.src,
-    { type: "video", src: "/atelier-video.mp4" },
-    kaiserImg.src,
-    { type: "video", src: "/kaiser-video.mp4" },
-    HBOimg.src,
-    { type: "video", src: "/the-palm-video.mp4" },
-    zenSilkImg.src,
-    { type: "video", src: "/plinth-video.mp4" },
-    kaiserImg.src,
-    { type: "video", src: "/atelier-video.mp4" },
-    HBOimg.src,
-    { type: "video", src: "/kaiser-video.mp4" },
-    zenSilkImg.src,
-    { type: "video", src: "/the-palm-video.mp4" },
-    kaiserImg.src,
-    { type: "video", src: "/plinth-video.mp4" },
-    kaiserImg.src,
-    { type: "video", src: "/the-palm-video.mp4" },
-    HBOimg.src,
-    { type: "video", src: "/atelier-video.mp4" },
-    zenSilkImg.src,
-    { type: "video", src: "/kaiser-video.mp4" },
-  ];
+  // const images = [
+  //   kaiserImg.src,
+  //   { type: "video", src: "/atelier-video.mp4" },
+  //   zenSilkImg.src,
+  //   { type: "video", src: "/kaiser-video.mp4" },
+  //   HBOimg.src,
+  //   { type: "video", src: "/plinth-video.mp4" },
+  //   kaiserImg.src,
+  //   { type: "video", src: "/the-palm-video.mp4" },
+  //   kaiserImg.src,
+  //   { type: "video", src: "/atelier-video.mp4" },
+  //   zenSilkImg.src,
+  //   { type: "video", src: "/kaiser-video.mp4" },
+  //   HBOimg.src,
+  //   { type: "video", src: "/plinth-video.mp4" },
+  //   kaiserImg.src,
+  //   { type: "video", src: "/atelier-video.mp4" },
+  //   kaiserImg.src,
+  //   { type: "video", src: "/kaiser-video.mp4" },
+  //   HBOimg.src,
+  //   { type: "video", src: "/the-palm-video.mp4" },
+  //   zenSilkImg.src,
+  //   { type: "video", src: "/plinth-video.mp4" },
+  //   kaiserImg.src,
+  //   { type: "video", src: "/atelier-video.mp4" },
+  //   HBOimg.src,
+  //   { type: "video", src: "/kaiser-video.mp4" },
+  //   zenSilkImg.src,
+  //   { type: "video", src: "/the-palm-video.mp4" },
+  //   kaiserImg.src,
+  //   { type: "video", src: "/plinth-video.mp4" },
+  //   kaiserImg.src,
+  //   { type: "video", src: "/the-palm-video.mp4" },
+  //   HBOimg.src,
+  //   { type: "video", src: "/atelier-video.mp4" },
+  //   zenSilkImg.src,
+  //   { type: "video", src: "/kaiser-video.mp4" },
+  // ];
 
   return (
     <>

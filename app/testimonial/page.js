@@ -5,6 +5,12 @@ import Footer from "../components/Footer";
 import { BackgroundGradient } from "../components/ui/background-gradient";
 import { CardBody, CardContainer, CardItem } from "../components/ui/3d-card";
 import { Button } from "../components/ui/moving-border";
+import HeroSection from "../components/HeroSection";
+import LogoSlider from "../components/LogoSlider";
+import PricingSection from "../components/PricingSection";
+import ServicesSection from "../components/ServicesSection";
+import NewsLetterSection from "../components/NewsLetterSection";
+import Testimonials from "../components/Testimonials";
 
 export default function TestimonialsPage() {
   const testimonials = [
@@ -121,11 +127,11 @@ export default function TestimonialsPage() {
   return (
     <>
       <div
-        className="bg-[#00051C] min-h-screen pt-6 lg:pt-0"
+        className="bg-[#00051C] min-h-screen pt-16 lg:pt-0"
         style={{
           backgroundColor: "rgb(0, 5, 28)",
           backgroundImage: `
-          radial-gradient(circle at 50% -35%, rgb(1, 178, 193) 0px, transparent 30%)`,
+                radial-gradient(circle at 50% -35%, rgb(1, 178, 193) 0px, transparent 30%)`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
@@ -133,246 +139,17 @@ export default function TestimonialsPage() {
         <div>
           <Navbar />
         </div>
+        <div className="lg:pt-0 pt-10">
+          <HeroSection />
+        </div>
+        <div className="lg:pt-0 pt-10">
+          <LogoSlider />
+        </div>
+        <div className="2xl:px-[84px] xl:px-[100px] 2xl:px-[120px] 3xl:px-[140px] py-10">
+          <Testimonials />
+        </div>
 
-        <section className="py-16 sm:py-32 md:py-48 lg:py-64 px-4 sm:px-8 md:px-16 lg:px-[108px] xl:px-[120px] 2xl:px-[140px] 3xl:px-[160px] relative flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-0">
-          <div className="relative z-10 max-w-4xl">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white uppercase">
-              Client <span className="!text-[#46F0FF]">Success</span>
-              <br />
-              Stories <br />
-              <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-                Real Results, Real Impact
-              </span>
-            </h1>
-            <p className="text-base sm:text-lg md:text-xl text-gray-300 mt-4 sm:mt-6 max-w-2xl leading-relaxed">
-              Discover how we've helped businesses transform their digital
-              presence and achieve extraordinary results through innovative
-              solutions.
-            </p>
-            <div className=" my-10 lg:mb-0 lg:mt-6 sm:mt-8">
-              <button
-                type="button"
-                className="inline-block cursor-pointer bg-[#01B2C1] text-white px-6 py-2 mt-4 rounded-full font-bold hover:bg-white hover:text-[#01B2C1] transition duration-300 text-sm sm:text-base lg:text-lg 3xl:px-8 3xl:py-3 3xl:text-lg 3xl:mt-6"
-              >
-                Start Your Story
-              </button>
-            </div>
-          </div>
-
-          <div className="relative pl-72 w-[223px] z-10 lg:py-0 py-6">
-            <div className="w-[59px] h-[59px] bg-[url('https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-06-04/BuRidrCEDW.png')] bg-cover bg-no-repeat absolute top-0 left-0 z-[13]" />
-            <div className="w-[59px] h-[59px] bg-[url('https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-06-04/XPqOcLZgnJ.png')] bg-cover bg-no-repeat absolute top-0 left-[53px] z-[22]" />
-            <span className="flex w-[223px] h-[72px] justify-start items-start font-['Poppins'] text-[16px] font-normal leading-[24px] text-[#fff] absolute top-[84px] left-0 text-left overflow-hidden z-[23]">
-              We bridge the gap between <br />
-              imagination and digital <br />
-              reality with passion.
-            </span>
-          </div>
-        </section>
-
-        <section className="py-12 md:py-20 px-4 sm:px-6 md:px-8 lg:px-[108px] relative bg-gradient-to-br from-blue-500/5 to-purple-500/10">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-8 md:mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-                Featured <span className="text-[#46F0FF]">Success Story</span>
-              </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-[#46F0FF] to-[#01B2C1] rounded-full mx-auto"></div>
-            </div>
-
-            <CardContainer className="inter-var max-w-5xl mx-auto">
-              <CardBody className="bg-gradient-to-br from-gray-900/80 to-gray-800/50 backdrop-blur-sm relative group/card dark:hover:shadow-2xl dark:hover:shadow-blue-500/[0.1] border-white/[0.2] w-full h-auto rounded-3xl p-6 sm:p-8 md:p-12 border">
-                <div className="grid md:grid-cols-3 gap-6 md:gap-8 items-center">
-                  <div className="md:col-span-2">
-                    <CardItem
-                      translateZ="60"
-                      className="flex gap-1 mb-3 md:mb-4"
-                    >
-                      {[...Array(featuredTestimonial.rating)].map((_, i) => (
-                        <span
-                          key={i}
-                          className="text-yellow-400 text-lg md:text-xl"
-                        >
-                          ⭐
-                        </span>
-                      ))}
-                    </CardItem>
-
-                    <CardItem
-                      as="blockquote"
-                      translateZ="60"
-                      className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed mb-4 md:mb-6 italic"
-                    >
-                      "{featuredTestimonial.content}"
-                    </CardItem>
-                    <CardItem
-                      translateZ="50"
-                      className="space-y-1 md:space-y-2"
-                    >
-                      <div className="text-[#46F0FF] font-semibold text-base md:text-lg">
-                        {featuredTestimonial.name}
-                      </div>
-                      <div className="text-gray-400 text-sm md:text-base">
-                        {featuredTestimonial.position} at{" "}
-                        {featuredTestimonial.company}
-                      </div>
-                      <div className="flex flex-wrap gap-2 mt-2 md:mt-4">
-                        <div className="bg-[#46F0FF]/10 px-3 py-1 md:px-4 md:py-2 rounded-full">
-                          <span className="text-[#46F0FF] text-xs md:text-sm font-medium">
-                            {featuredTestimonial.project}
-                          </span>
-                        </div>
-                        <div className="bg-green-500/10 px-3 py-1 md:px-4 md:py-2 rounded-full">
-                          <span className="text-green-400 text-xs md:text-sm font-medium">
-                            {featuredTestimonial.result}
-                          </span>
-                        </div>
-                      </div>
-                    </CardItem>
-                  </div>
-
-                  <div className="text-center mt-4 md:mt-0">
-                    <CardItem translateZ="100">
-                      <img
-                        src={featuredTestimonial.image}
-                        alt={featuredTestimonial.name}
-                        className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover mx-auto border-4 border-[#46F0FF]/30 shadow-xl"
-                      />
-                    </CardItem>
-                  </div>
-                </div>
-              </CardBody>
-            </CardContainer>
-          </div>
-        </section>
-        <section className="py-12 md:py-20 px-4 sm:px-6 md:px-8 lg:px-[108px] relative">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-8 md:mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-                What Our <span className="text-[#46F0FF]">Clients Say</span>
-              </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-[#46F0FF] to-[#01B2C1] rounded-full mx-auto"></div>
-              <p className="text-base sm:text-lg text-gray-300 mt-4 md:mt-6 max-w-2xl mx-auto">
-                Real feedback from real clients who trusted us with their
-                digital transformation
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-              {testimonials.map((testimonial, index) => (
-                <BackgroundGradient
-                  key={index}
-                  className="rounded-[22px] p-6 sm:p-8 bg-white dark:bg-zinc-900 group hover:transform hover:scale-105 transition-all duration-300"
-                >
-                  <div className="space-y-3 md:space-y-4">
-                    <div className="flex gap-1">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <span
-                          key={i}
-                          className="text-yellow-400 text-base md:text-lg"
-                        >
-                          ⭐
-                        </span>
-                      ))}
-                    </div>
-                    <p className="text-black leading-relaxed text-sm sm:text-base">
-                      "{testimonial.content}"
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      <div className="bg-[#46F0FF]/10 px-2 py-1 sm:px-3 sm:py-1 rounded-full">
-                        <span className="text-[#46F0FF] text-xs font-medium">
-                          {testimonial.project}
-                        </span>
-                      </div>
-                      <div className="bg-green-500/10 px-2 py-1 sm:px-3 sm:py-1 rounded-full">
-                        <span className="text-green-400 text-xs font-medium">
-                          {testimonial.result}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3 md:gap-4 pt-3 md:pt-4 border-t border-white/10">
-                      <img
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-[#46F0FF]/20"
-                      />
-                      <div>
-                        <h4 className="text-white font-semibold text-sm sm:text-base">
-                          {testimonial.name}
-                        </h4>
-                        <p className="text-gray-500 text-xs sm:text-sm font-bold">
-                          {testimonial.position} at {testimonial.company}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </BackgroundGradient>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="py-12 md:py-20 px-4 sm:px-6 md:px-8 lg:px-[108px] bg-white/5 relative">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-8 md:mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Our <span className="text-[#46F0FF]">Track Record</span>
-              </h2>
-              <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto"></div>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
-              {stats.map((stat, index) => (
-                <div
-                  key={index}
-                  className="text-center p-4 sm:p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl hover:border-[#46F0FF]/30 transition-all duration-300 group"
-                >
-                  <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#46F0FF] to-[#01B2C1] bg-clip-text text-transparent mb-1 sm:mb-2 group-hover:scale-110 transition-transform duration-300">
-                    {stat.number}
-                  </div>
-                  <div className="text-white font-semibold text-sm sm:text-base mb-1 sm:mb-2">
-                    {stat.label}
-                  </div>
-                  <div className="text-gray-400 text-xs sm:text-sm">
-                    {stat.description}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Call to Action */}
-        <section className="py-12 md:py-20 px-4 sm:px-6 md:px-8 lg:px-[108px] bg-gradient-to-r from-blue-500/10 to-purple-500/10 relative overflow-hidden">
-          <div className="max-w-4xl mx-auto text-center relative z-10">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-[#46F0FF] to-[#01B2C1] bg-clip-text text-transparent">
-              Ready to Create Your Success Story?
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto">
-              Join our growing list of satisfied clients and transform your
-              digital presence today.
-            </p>
-            <div className="flex lg:flex-row gap-3 sm:gap-4 justify-center">
-              <Button
-                className="font-semibold text-base sm:text-lg cursor-pointer"
-                containerClassName="inline-block"
-                borderRadius="9999px"
-                duration={3000}
-              >
-                Start Your Project
-              </Button>
-              <Button
-                className="font-semibold text-base sm:text-lg cursor-pointer bg-transparent border border-[#46F0FF] text-[#46F0FF] hover:bg-[#46F0FF] hover:text-black"
-                containerClassName="inline-block"
-                borderRadius="9999px"
-                duration={3000}
-              >
-                View Our Work
-              </Button>
-            </div>
-          </div>
-        </section>
-
-        <div className="px-4 sm:px-6 md:px-8 lg:px-[84px] py-12 md:py-20 lg:py-44">
+        <div className="px-4 sm:px-6 lg:px-8 xl:px-[84px] py-12 md:py-44">
           <Footer />
         </div>
       </div>

@@ -12,6 +12,7 @@ const LogoSlider = () => {
             <img
               src={logo}
               alt={`logo-${i}`}
+              loading="lazy"
             />
           </div>
         ))}

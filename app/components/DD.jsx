@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { motion } from "motion/react";
 import dynamic from "next/dynamic";
 
 const World = dynamic(
@@ -398,13 +397,11 @@ export function DD() {
   ];
 
   return (
-    <>
-      <div className="relative w-full  h-screen bg-transparent cursor-grab">
-        <div className="absolute inset-0 z-10">
-          <World data={sampleArcs} globeConfig={globeConfig} />
-        </div>
+    <div className="relative w-full h-screen bg-transparent cursor-grab">
+      <div className="absolute inset-0 z-10">
+        <World data={sampleArcs} globeConfig={globeConfig} />
       </div>
-    </>
+    </div>
     // <div
     //   className="flex flex-row items-center justify-center py-20 h-screen md:h-auto dark:bg-black bg-white relative w-full">
     //   <div
